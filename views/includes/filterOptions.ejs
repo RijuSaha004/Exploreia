@@ -1,0 +1,21 @@
+<div id="filters">
+    <div class="all_filters">
+        <% for(let category of categoryList) { %>
+            <a href="/listings/filter/<%= category.name %>">
+                <div class="filter">
+                    <div><%- category.icon %></div>
+                    <p>
+                        <%= category.name %>
+                    </p>
+                </div>
+            </a>
+            <%}%>
+    </div>
+
+    <div class="tax-toggle">
+        <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+        </div>
+    </div>
+</div>

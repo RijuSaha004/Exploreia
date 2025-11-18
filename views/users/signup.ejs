@@ -1,0 +1,28 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row mt-3">
+        <h1 class="col-6 offset-3">Signup on Exploreia</h1>
+        <div class="col-6 offset-3">
+            <form method="POST" action="/signup" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input id="username" name="username" placeholder="Enter Username Here" type="text"
+                        class="form-control" required>
+                    <div class="invalid-feedback">Username was required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" placeholder="Enter Email Here" type="email" class="form-control"
+                        required>
+                    <div class="invalid-feedback">Email was required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" name="password" placeholder="Enter Password Here" type="password"
+                        class="form-control" required>
+                    <div class="invalid-feedback">Password was required</div>
+                </div>
+                <button class="btn btn-success">Signup</button>
+            </form>
+        </div>
+    </div>

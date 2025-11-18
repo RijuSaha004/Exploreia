@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top" style="background-color: gray;">
+    <div class="container-fluid " style="background-color: gray;">
+
+        <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i> Exploreia</a>
+
+        <div>
+            <form method="POST" action="/listings/search" class="d-flex" role="search">
+                <input class="form-control me-2 search-input" name="searchItem" type="search"
+                    placeholder="Search Destination" />
+                <button class="btn search-btn" type="submit">Search</button>
+            </form>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!-- <div class="navbar-nav">
+                <a class="nav-link" href="/listings"><b>Explore</b></a>
+            </div> -->
+
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/listings/new"><u>Add New Listings</u></a>
+                <%if(!currUser){%>
+                    <a class="nav-link" href="/signup"><b><u>Sign Up</u></b></a>
+                    <a class="nav-link" href="/login"><b><u>Log In</u></b></a>
+                    <%}%>
+                        <%if(currUser){%>
+                            <a class="nav-link" href="/logout">Log Out</a>
+                            <%}%>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- style="background-color: gray;" -->
