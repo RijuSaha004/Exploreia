@@ -39,14 +39,35 @@
                         <div class="invalid-feedback">Country was required</div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label for="location" class="form-label">Location</label>
-                    <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control"
-                        required>
-                    <div class="invalid-feedback">location was required</div>
-                </div>
-                <br>
-                <button type="submit" class="btn mt-3 edit-btn">Enter</button>
+                <div class="row">
+                    <div class="mb-3 col-md-8">
+                        <label for="location" class="form-label">Location</label>
+                        <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control"
+                            required>
+                        <div class="invalid-feedback">location was required</div>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label for="category" class="form-label">Category</label>
+                        <select name="listing[category]" id="category" class="form-select" required>
+                            <option value="" disabled>Select a category</option>
+                            <option value="None" <%=listing.category==='None' ? 'selected' : '' %>>None</option>
+                            <option value="River" <%=listing.category==='River' ? 'selected' : '' %>>River</option>
+                            <option value="Beach" <%=listing.category==='Beach' ? 'selected' : '' %>>Beach</option>
+                            <option value="Mountain" <%=listing.category==='Mountain' ? 'selected' : '' %>>Mountain
+                            </option>
+                            <option value="Pool" <%=listing.category==='Pool' ? 'selected' : '' %>>Pool</option>
+                            <option value="Villa" <%=listing.category==='Villa' ? 'selected' : '' %>>Villa</option>
+                            <option value="Jungle" <%=listing.category==='Jungle' ? 'selected' : '' %>>Jungle</option>
+                            <option value="Snow" <%=listing.category==='Snow' ? 'selected' : '' %>>Snow</option>
+                            <option value="Lake" <%=listing.category==='Lake' ? 'selected' : '' %>>Lake</option>
+                            <option value="Camping" <%=listing.category==='Camping' ? 'selected' : '' %>>Camping
+                            </option>
+                            <option value="City" <%=listing.category==='City' ? 'selected' : '' %>>City</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a category</div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn mt-3 edit-btn">Enter</button>
             </form>
         </div>
     </div>
